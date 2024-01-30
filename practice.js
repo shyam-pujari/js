@@ -146,10 +146,10 @@ my_fun = function (i) {
 };
 is_array.forEach(my_fun);
 /////////////////////////////////
-// scopes 
-var n = "shyam";
+// scopes
+var Name = "shyam";
 function allocate() {
-  if (n === "shyam") {
+  if (Name === "shyam") {
     var deparment = "bsc";
     console.log(deparment);
   }
