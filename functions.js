@@ -21,14 +21,14 @@ function callingeacharr() {
     console.log(element);
   });
 }
-// callingeacharr();
+console.log(callingeacharr());
 function callingeachobj() {
   for (property in myobj) {
     // console.log(`${property}: ${myobj[property]}`);
     console.log(`${myobj[property]}`);
   }
 }
-// callingeachobj();
+console.log(callingeachobj());
 
 function checkingobjandArr(obj, arr) {
   console.log(arr);
@@ -38,3 +38,9 @@ function checkingobjandArr(obj, arr) {
   } else console.log("not equal");
 }
 checkingobjandArr(callingeacharr(), callingeachobj());
+
+const to_add = (a, b, c) => {
+  total = a * b + c;
+  return `the total of the sum is = ${total}`;
+};
+console.log(to_add(2, 2, 2));
