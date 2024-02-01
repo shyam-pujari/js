@@ -39,12 +39,61 @@ for (value of itre) {
 itre1 = myarr.entries();
 console.log(itre1.next().value);
 console.log(itre1.next().value);
-
-lessthen = (currentvalue) => currentvalue < 40;
-
-new_arr = [1, 4, 33, 39, 40];
-console.log(new_arr.every(lessthen));
-
-for (pros of myarr2) {
-  console.log(pros);
+//every() => checks the array with condition provided returns true || false
+new_arr = [1, 4, 33, 39, 4];
+function check(new_arr) {
+  return new_arr < 40;
 }
+console.log(new_arr.every(check));
+
+function is_positive(value) {
+  return value > 0;
+}
+
+function fun() {
+  numbers = [1, 2, 3, 4];
+  let is_value = numbers.every(is_positive);
+  console.log(is_value);
+}
+fun();
+
+new_number = [2, 4, 6];
+function is_even(new_number) {
+  return new_number % 2 == 0;
+}
+console.log(new_number.every(is_even));
+//prints every value present in the array in a new line
+for (langs of myarr2) {
+  console.log(langs);
+}
+//fill() replaces or edits the array with given value fill(value, start index, end index)
+console.log(myarr.fill(0, 0, 5));
+// console.log(myarr2.fill("c"));
+//filter() => checks the array with given condition||function() and filters and stores them in a new array
+Fi = myarr2.filter((arr) => arr.length > 5);
+console.log(Fi);
+
+lower = myarr1.filter((arr) => arr.length < 6);
+console.log(lower);
+
+function bigenough(filtered) {
+  return filtered > 10;
+}
+filterd = [66, 3, 77, 88, 4, 99, 10].filter(bigenough);
+console.log(filterd);
+
+prime = [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+function isprime(num) {
+  for (let i = 2; num > i; i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return num > 1;
+}
+
+console.log(prime.filter(isprime));
+//
+natural = [2, 6, 10, , 90, 100, 150];
+natural1 = natural.find((Element) => Element > 90);
+console.log(natural1);
