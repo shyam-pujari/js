@@ -149,9 +149,69 @@ class person {
     this.age = age;
   }
   greet() {
-    console.log(`this is my name ${this.Name} and my age is ${this.age}`);
+    console.log(`my name is ${this.Name} and my age is ${this.age}`);
   }
 }
 const person1 = new person("shyam", 21);
 person1.greet();
 console.log(person1.Name);
+
+const ob = {
+  name: "shyam",
+  age: 21,
+};
+const { name, age } = ob;
+console.log(name, age);
+
+// const numbers = [1, 2, 3, 4, 5];
+// const [first, second] = numbers;
+// console.log(first, second);
+// let user = prompt("enter any input");
+
+let input = "shyam";
+const my_promise = new Promise((resolve, reject) => {
+  // input = prompt("enter your name");
+  console.log(`this is the input ${input}`);
+  if (input == "shyam") {
+    resolve(input);
+  } else {
+    reject(new error("error"));
+  }
+});
+my_promise
+  .then((value) => {
+    console.log(value);
+    console.log(`my name is ${value}`);
+  })
+  .catch((error) => {
+    console.log("rejected");
+  });
+///////////////////////////////////////////////////
+let useinput = 11;
+const m_promise = new Promise((resolve, reject) => {
+  if (useinput >= 10) {
+    resolve(useinput);
+  } else {
+    reject(print_err);
+  }
+});
+m_promise
+  .then((answer) => {
+    console.log(`your answer is ${answer}`);
+  })
+  .catch((error) => {
+    console.log("rejected");
+  });
+
+// setTimeout(function () {
+//   console.log(`hi `);
+// }, 1000);
+
+console.log("start");
+const async = (data) => {
+  setTimeout(() => {
+    console.log(`executed ${data}`);
+  }, 1000);
+};
+async("hello");
+console.log("end");
