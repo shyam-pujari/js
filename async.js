@@ -10,47 +10,71 @@
 // });
 // console.log("end");
 
-function first() {
-  console.log("first");
-}
+// function first() {
+//   console.log("first");
+// }
 
-function second(callback) {
+// function second(callback) {
+//   setTimeout(() => {
+//     console.log("second");
+//     callback();
+//   }, 2000);
+// }
+// function third() {
+//   console.log("third");
+// }
+
+// first();
+// second(third);
+
+// function callbackhell() {
+//   setTimeout(() => {
+//     const data = { name: "shyam" };
+//     console.log(data);
+//     setTimeout(() => {
+//       console.log("callbackhell has been excuted");
+//     }, 1000);
+//   }, 2000);
+// }
+
+// callbackhell();
+
+// const num = 10;
+// const new_pormise = new Promise((resovle, reject) => {
+//   if (num === 10) {
+//     resovle("is equal to");
+//   } else {
+//     reject("is not equal to");
+//   }
+// });
+// new_pormise
+//   .then((value) => {
+//     console.log(value);
+//   })
+//   .catch((valvue) => {
+//     console.log(valvue);
+//   });
+
+function mission(callback) {
+  console.log("statring mission");
   setTimeout(() => {
-    console.log("second");
-    callback();
-  }, 2000);
+    callback("mission completed");
+  }, 1000);
 }
-function third() {
-  console.log("third");
+function status(value) {
+  console.log(`status of your mission: ${value}`);
 }
+mission(task);
 
-first();
-second(third);
-
-function callbackhell() {
-  setTimeout(() => {
-    const data = { name: "shyam" };
-    console.log(data);
-    setTimeout(() => {
-      console.log("callbackhell has been excuted");
-    }, 1000);
-  }, 2000);
+function task(callback) {
+  console.log("mission accompised");
 }
 
-callbackhell();
+// task(status);
 
-const num = 10;
-const new_pormise = new Promise((resovle, reject) => {
-  if (num === 10) {
-    resovle("is equal to");
-  } else {
-    reject("is not equal to");
-  }
-});
-new_pormise
-  .then((value) => {
-    console.log(value);
-  })
-  .catch((valvue) => {
-    console.log(valvue);
-  });
+async function todo() {
+  const respons = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+  const jsoned = respons.json;
+  console.log(jsoned);
+}
+todo();
