@@ -1,9 +1,23 @@
 body {
-  text-align: center;
+  /* text-align: center; */
   flex: content;
 }
 h1 {
   color: brown;
   text-align: center;
   background-color: dimgrey;
+}
+a {
+  text-decoration: none;
+  text-align: right;
+}
+h4 {
+  text-align: center;
+}
+div {
+  text-align: center;
+  text-decoration: dotted;
+  ol {
+    text-decoration: none;
+  }
 }
